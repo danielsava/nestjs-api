@@ -14,19 +14,19 @@ Instalado o NodeJS, basta instalar o `Nest CLI` através do npm:
 
 
     # Instalação do 'Nest CLI'
-    npm i -g @nestjs/cli
+    $ npm i -g @nestjs/cli
 
     # Para criar um novo projeto
-    nest new <project-name>
+    $ nest new <project-name>
 
     # Para executar o projeto
-    npm run start
+    $ npm run start
 
     # Modo Dev
-    npm run start:dev
+    $ npm run start:dev
 
     # Modo Prod
-    npm run start:prod
+    $ npm run start:prod
 
 <br/>
 
@@ -46,8 +46,37 @@ $ npm run test:cov
 <br/>
 
 
-## Support
+## Banco de Dados
 
+A aplicação será integrada com [TypeORM](https://typeorm.io/) e [PostgresSQL](https://www.postgresql.org/). O framework `NestJS` oferece integração nativa com `TypeORM` e este com `PostgreSQL`:
 
-## Stay in touch
+    $ npm install --save @nestjs/typeorm typeorm pg
+
+Caso queira utilizar com o `MySQL`: 
+
+    $ npm install --save @nestjs/typeorm typeorm mysql
+
+<br>
+
+### Instalação do PostgreSQL no Windows
+
+No Windows, através do [Chocolatey](https://chocolatey.org/packages/postgresql):
+
+    # choco install postgresql --params '/Password:123456'
+
+Executar o comando acima com `privilégios de Administrador`.
+
+<br/>
+
+## GraphQL
+
+O `NestJS` já possui integração com `GraphQL`. Basta instalar basta executar:
+
+    $ npm i @nestjs/graphql graphql-tools graphql
+
+Necessário também instalar as dependências do `Apollo Server` para o `Express`. Isso caso utilize Express no projeto, que é o default:
+
+    $ npm i apollo-server-express
+
+Caso utilize O Fastify, instalar o `apollo-server-fastify`.
 
