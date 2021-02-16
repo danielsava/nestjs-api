@@ -6,7 +6,7 @@
 
 <br/>
 
-## Instação
+## Instalação
 
 O único pré-requisito é a instalação do NodeJS. Siga as instruções de instalação no [site oficial](https://nodejs.org/en/).
 
