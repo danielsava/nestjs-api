@@ -80,3 +80,74 @@ Necessário também instalar as dependências do `Apollo Server` para o `Express
 
 Caso utilize O Fastify, instalar o `apollo-server-fastify`.
 
+<br/>
+
+## Módulo CRUD 'Usuário'
+
+Projeto conterá um CRUD de Usuários. Para isso será criado um módulo para esta entidade. O `NestJS CLI` facilita a criação de módulos, serviços, controllers e outros
+
+<br/>
+
+### Módulo 'User'
+
+Para criar o módulo `user`:
+
+    $ nest g module user
+
+
+<br/>
+
+### Service 'User'
+
+Para criar o serviço User:
+
+    $ nest g s user
+
+<br/>
+
+### Resolver (GraphQL) 'User'
+
+Como o projeto utilzia GraphQL será criado um resolver e não um controller:
+
+    $ nest g r user
+
+
+<br/>
+
+### Entidade 'User'
+
+Para representar a entidade `User` foi criado no diretório raiz do módulo User um arquivo `user.entity.ts`. Documentação do NestJS recomenda utilizar `classes` para criar as entidades ao invés de utilizar interfaces.
+
+<br/>
+
+## Nest CLI Plugin GraphQL
+
+As configurações das entidades para GraphQL (Object Type) exige a anotação `@Field` em todos os campos da entidade. Devido á limtações de reflection do Typescript a equipe de desenvolvimento do NestJS criou um plugin para ajudar na geração desses códigos.
+
+Com este plugin é necessário anotar com o `@Field` somente os campos especiais., como por exemplo o campo `Id`. 
+
+Para mais informações, acesse a [Documentação Oficial](https://docs.nestjs.com/graphql/cli-plugin).
+
+Para instalar o plugin, adicione as seguintes linhas ao `nest-cli.json`:
+
+    
+    # nest-cli.json
+    {
+        "collection": "@nestjs/schematics",
+        "sourceRoot": "src",
+        "compilerOptions": {
+            "plugins": ["@nestjs/graphql/plugins"]
+        }
+    }
+
+<br/>
+
+## BeanValidation do TypeORM
+
+O TypeORM possui uma espécie de Bean Validation. Para instalar:
+
+
+
+
+
+
