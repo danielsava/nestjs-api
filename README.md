@@ -146,6 +146,11 @@ Para instalar o plugin, adicione as seguintes linhas ao `nest-cli.json`:
 
 O TypeORM possui uma espécie de Bean Validation. Para instalar:
 
+    # Validator
+    $ npm i class-validator
+
+    # Transformes
+    $ npm i class-transformer
 
 
 
