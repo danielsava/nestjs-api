@@ -7,12 +7,18 @@ import { User } from './user.entity';
 @Injectable()
 export class UserService {
 
+
     constructor(
         @InjectRepository(User)
         private userRepository: Repository<User>
     ) {}
 
     
+    async findAllUsers(): Promise<User[]> {
+        const users = await this.userRepository.find();
+        return users;
+    }
+
     async createUser(data: CreateUserInput): Promise<User> {
         const user = await this.userRepository.create(data);
         const userSaved = await this.userRepository.save(user);
@@ -23,7 +29,5 @@ export class UserService {
 
         return userSaved;
     }
-
-
 
 }
