@@ -197,7 +197,29 @@ Abaixo segue alguns exemplos de consultas para este projeto:
         }
     }
 
-asdf
+
+    # Mutation 'updateUser'
+    mutation {
+        updateUser(
+            id: "1"
+            data: {
+                name: "Daniel Sava Pupak"
+            }
+        ) {
+            id
+            name
+            email
+        }
+    }
+
+
+    # Mutation 'deleteUser'
+    mutation {
+        deleteUser(id: "3")
+    }
+
+
+As operações acima estão implementadas no resolver do User: `user.resolver.ts`
 
 
 
