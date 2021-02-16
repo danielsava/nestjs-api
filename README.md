@@ -152,6 +152,52 @@ O TypeORM possui uma espécie de Bean Validation. Para instalar:
     # Transformes
     $ npm i class-transformer
 
+<br/>
+
+## GraphQL Playground
+
+Para acessar o `Playground` do GraphQL:
+
+    http://localhost:3000/graphql
+
+
+Abaixo segue alguns exemplos de consultas para este projeto:
+
+    # Query 'users'
+    {
+        users {
+            id 
+            name
+        }
+    }
+
+
+    # Query 'user'
+    {
+        user(
+            id: "1"
+        ) {
+            id
+            name
+            email
+        }
+    }
+
+
+    # Mutatation 'createUSer'
+    mutation {
+        createUser(
+            data: {
+                name: "Daniel Sava"
+                email: "danielsavas@gmail.com"
+            }
+        ) {
+            id
+            name
+        }
+    }
+
+asdf
 
 
 
