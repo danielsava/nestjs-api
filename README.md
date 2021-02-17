@@ -236,3 +236,20 @@ No mesmo diretório do arquivo `docker-compose.yml`, executar:
     $ docker-compose up --build
 
 Com este comando acima do docker-compose não é necessário executar o `docker build -t `.
+
+
+<br/>
+
+## Autenticação
+
+Será configurado no porjeto o framework [PassportJS](http://www.passportjs.org) para implementação dos processos de autenticação. O `NestJS` já possui uma integraçao com este framework.
+
+
+Foi instalado no projeto a biblioteca [BCrypt](https://www.npmjs.com/package/bcrypt) para realizar na criptografia de senhas do usuário:
+
+    # Biblioteca BCrypt
+    $ npm i bcrypt
+
+    # ´Types´ para BCrypt (auto-complete na ide) instalado em modo desenv
+    $ npm i @types/bcrypt -D
+

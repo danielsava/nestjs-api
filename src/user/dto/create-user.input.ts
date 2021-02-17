@@ -12,4 +12,8 @@ export class CreateUserInput {
     @IsNotEmpty({message: 'Informe o email'})
     email: string;
 
+    @IsString()
+    @IsNotEmpty({message: 'Informe a senha'})
+    password: string;
+
 }
