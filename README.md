@@ -221,6 +221,18 @@ Abaixo segue alguns exemplos de consultas para este projeto:
 
 As operações acima estão implementadas no resolver do User: `user.resolver.ts`
 
+<br/>
 
+## Docker
 
+Criado o arquivo `Dockerfile` para o projeto, executar o comando abaixo no `mesmo diretório` onde foi criado o Dockerfile: 
 
+    $ docker build -t nest_api .
+
+<br/>
+
+No mesmo diretório do arquivo `docker-compose.yml`, executar:
+
+    $ docker-compose up --build
+
+Com este comando acima do docker-compose não é necessário executar o `docker build -t `.
