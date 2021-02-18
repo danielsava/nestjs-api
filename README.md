@@ -253,3 +253,15 @@ Foi instalado no projeto a biblioteca [BCrypt](https://www.npmjs.com/package/bcr
     # ´Types´ para BCrypt (auto-complete na ide) instalado em modo desenv
     $ npm i @types/bcrypt -D
 
+<br/>
+
+Além das alterações na entidade User, para adicionar um campo Senha, e nas classes de serviço e resolver para adicionar um método de consultar por email, foi criado um módulo específico para autenticação, chamado de `auth`:
+
+    # Módulo
+    $ nest g mo auth
+
+    # Servico
+    $ nest g s auth
+
+    # Resolver
+    $ nest g r auth
