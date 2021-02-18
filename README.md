@@ -265,3 +265,15 @@ Além das alterações na entidade User, para adicionar um campo Senha, e nas cl
 
     # Resolver
     $ nest g r auth
+
+<br/>
+
+### PassportJS com Token JWT
+
+Abaixo segue os comandos necessários para instalar e configurar as depedências do `PassportJS com JWT`:
+
+    # PassportJs com JWT no NestJS
+    $ npm i @nestjs/passport passport @nestjs/jwt passport-jwt
+
+    # Types (desenv)
+    $ npm i @types/passport-jwt -D
