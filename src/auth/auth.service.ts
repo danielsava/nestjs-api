@@ -14,8 +14,6 @@ export class AuthService {
     async validateUser(data: AuthInput): Promise<AuthType> {
 
         const user = await this.userService.findUserByEmail(data.email);
-        if(!user)
-            throw new NotFoundException(`Usuário não encontrado para o email ${data.email}`)
 
         const validPassword = compareSync(data.password, user.password);
         if(!validPassword)
