@@ -277,3 +277,14 @@ Abaixo segue os comandos necessários para instalar e configurar as depedências
 
     # Types (desenv)
     $ npm i @types/passport-jwt -D
+
+<br/>
+
+### Testando Rotas Protegidas no GraphQL
+
+Através `Playground` podemos testar as rotas protegidas com o `@UserGuards` configurando os `HTTP HEADERS` da seguinte forma:
+
+    {
+        "Authorization" : "Bearer       eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiRGFuaWVsIFNhdmEiLCJpYXQiOjE2MTM3MDYzNzMsImV4cCI6MTYxMzcwNjQ5M30.ajerp06IN8LyP9oF83mmBNosYayfHLg9KXMu4YsedmI"
+    }
+
